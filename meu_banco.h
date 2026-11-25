@@ -1,4 +1,4 @@
-#ifndef MEU_BANCO_H
+ #ifndef MEU_BANCO_H
 #define MEU_BANCO_H
 
 #define MAX_CLIENTES 100
@@ -31,13 +31,13 @@ struct Cliente {
     int qtdMovimentos;
 };
 
-/* Variaveis globais: ficam criadas no banco.c.
+
    O "extern" avisa aos outros arquivos que elas existem la. */
 extern struct Cliente clientes[MAX_CLIENTES];
 extern int qtdClientes;
 extern int bancoAberto;
 
-/* ---------- funcoes auxiliares ---------- */
+
 float saldoTotalCliente(int i);
 float limiteEmprestimo(int i);
 int aptoEmprestimo(int i);
@@ -45,7 +45,7 @@ int aptoTitulo(int i);
 void registrarMovimento(int i, char operacao[], int tipoConta, float valor);
 int buscarCliente(int numero);
 
-/* ---------- cadastro e operacoes do cliente ---------- */
+
 void cadastrarCliente();
 int escolherConta(int i);
 void depositar(int i);
@@ -55,7 +55,7 @@ void comprarTitulo(int i);
 void verExtrato(int i);
 void acessarConta();
 
-/* ---------- opcoes do menu principal ---------- */
+
 void abrirBanco();
 void consultarHistorico();
 void efetuarSorteio();
